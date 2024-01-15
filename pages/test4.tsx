@@ -22,9 +22,9 @@ export default function Test4Page({
         </MenuButton>
       </Menu>
       <Menu>
-        <MyLink2 href="/hoge">
-          <MenuButton>hoge</MenuButton>
-        </MyLink2>
+        <MenuButton>
+          <MyLink2 href="/hoge">hoge</MyLink2>
+        </MenuButton>
       </Menu>
       <Menu>
         <MenuButton
