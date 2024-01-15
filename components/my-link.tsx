@@ -32,7 +32,11 @@ export function MyLink2({ children, href, ...props }: LinkProps) {
   );
 }
 
-export const MyLink3 = forwardRef(({ children, href, ...props }, ref) => {
+// eslint-disable-next-line prefer-arrow-callback
+export const MyLink3 = forwardRef(function MyLink3(
+  { children, href, ...props },
+  ref
+) {
   const { isPreview } = useRouter();
 
   return isPreview ? (

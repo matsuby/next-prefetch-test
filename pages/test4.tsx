@@ -27,12 +27,10 @@ export default function Test4Page({
         </MenuButton>
       </Menu>
       <Menu>
-        <MenuButton
-          as={Link}
-          href="/piyo"
-          prefetch={isPreview ? false : undefined}
-        >
-          piyo
+        <MenuButton>
+          <MyLink3 as={MyLink3} href="/piyo">
+            piyo
+          </MyLink3>
         </MenuButton>
       </Menu>
     </>
