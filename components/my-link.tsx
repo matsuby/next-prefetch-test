@@ -6,7 +6,12 @@ export function MyLink1({ children, href, ...props }: LinkProps) {
   const { isPreview } = useRouter();
 
   return (
-    <Link href={href} prefetch={!!isPreview} {...props}>
+    <Link
+      href={href}
+      prefetch={!!isPreview}
+      {...props}
+      data-my-isPreview={`${isPreview}`}
+    >
       {children}
     </Link>
   );
@@ -14,6 +19,7 @@ export function MyLink1({ children, href, ...props }: LinkProps) {
 
 export function MyLink2({ children, href, ...props }: LinkProps) {
   const { isPreview } = useRouter();
+  console.info(`⭐️⭐️⭐️: isPreview=${isPreview}`);
 
   return isPreview ? (
     <Link href={href} prefetch={false} {...props}>
