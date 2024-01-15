@@ -10,6 +10,7 @@ export default function Test3Page() {
       <Box as={MyLink2} href="/links/fuga">
         fuga
       </Box>
+      <MyLink2 href="/links/piyo">piyo</MyLink2>
     </>
   );
 }
