@@ -1,4 +1,4 @@
-import { MyLink2 } from "@/components/my-link";
+import { MyLink2, MyLink3 } from "@/components/my-link";
 import { Link } from "@chakra-ui/next-js";
 import { Menu, MenuButton } from "@chakra-ui/react";
 import type { InferGetStaticPropsType } from "next";
@@ -22,8 +22,8 @@ export default function Test4Page({
         </MenuButton>
       </Menu>
       <Menu>
-        <MenuButton>
-          <MyLink2 href="/hoge">hoge</MyLink2>
+        <MenuButton as={MyLink3} href="/hoge">
+          hoge
         </MenuButton>
       </Menu>
       <Menu>

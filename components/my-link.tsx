@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
 import { Link, type LinkProps } from "@chakra-ui/next-js";
+import { forwardRef } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 export function MyLink1({ children, href, ...props }: LinkProps) {
@@ -31,3 +31,17 @@ export function MyLink2({ children, href, ...props }: LinkProps) {
     </Link>
   );
 }
+
+export const MyLink3 = forwardRef(({ children, href, ...props }, ref) => {
+  const { isPreview } = useRouter();
+
+  return isPreview ? (
+    <Link ref={ref} href={href} prefetch={false} {...props}>
+      {children}
+    </Link>
+  ) : (
+    <Link ref={ref} href={href} {...props}>
+      {children}
+    </Link>
+  );
+});
