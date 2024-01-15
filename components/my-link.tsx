@@ -38,13 +38,13 @@ export const MyLink3 = forwardRef(function MyLink3(
   ref
 ) {
   const { isPreview } = useRouter();
-
+  console.log(isPreview);
   return isPreview ? (
     <Link ref={ref} href={href} prefetch={false} {...props}>
       {children}
     </Link>
   ) : (
-    <Link ref={ref} href={href} {...props}>
+    <Link ref={ref} href={href} prefetch={true} {...props}>
       {children}
     </Link>
   );
