@@ -3,13 +3,14 @@ import type { InferGetStaticPropsType } from "next";
 export function getStaticProps() {
   return {
     props: {
-      huga: "piyo",
+      fuga: "fuga",
     },
+    // revalidate: 15,
   };
 }
 
-export default function HugaPage({
-  huga,
+export default function FugaPage({
+  fuga,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <div>{huga}</div>;
+  return <div>{fuga}</div>;
 }
