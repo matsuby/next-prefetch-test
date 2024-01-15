@@ -27,11 +27,9 @@ export default function Test4Page({
         </MenuButton>
       </Menu>
       <Menu>
-        <MenuButton>
-          <MyLink3 as={MyLink3} href="/piyo">
-            piyo
-          </MyLink3>
-        </MenuButton>
+        <MyLink3 as={MenuButton} href="/piyo">
+          piyo
+        </MyLink3>
       </Menu>
     </>
   );
