@@ -20,10 +20,13 @@ export default function Test3Page({
       <Box as={MyLink1} href="/links/hoge">
         hoge
       </Box>
+
       <Box as={MyLink2} href="/links/fuga">
         fuga
       </Box>
+
       <MyLink2 href="/links/piyo">piyo</MyLink2>
+
       <Link
         href="/links/xyz"
         prefetch={isPreview ? undefined : false}
