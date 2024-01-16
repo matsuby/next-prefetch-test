@@ -25,17 +25,17 @@ export default function Test4Page({
 
   return (
     <>
-      <Menu>
+      <Menu isOpen={isOpen}>
         <MenuButton
           as={MyLink3}
           href="/fuga"
-          onMouseOver={onOpen}
+          onMouseEnter={onOpen}
           onMouseLeave={onClose}
         >
           <Text>fuga</Text>
         </MenuButton>
         {isOpen && (
-          <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+          <MenuList mt="-10px" onMouseEnter={onOpen} onMouseLeave={onClose}>
             <MenuItem as={MyLink3} href="/xyz">
               <Text>xyz</Text>
             </MenuItem>
