@@ -28,7 +28,7 @@ export default function Test4Page({
       <Menu isOpen={isOpen}>
         <MenuButton
           as={MyLink3}
-          href="/fuga"
+          href="/links/fuga"
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
         >
@@ -36,19 +36,19 @@ export default function Test4Page({
         </MenuButton>
         {isOpen && (
           <MenuList mt="-10px" onMouseEnter={onOpen} onMouseLeave={onClose}>
-            <MenuItem as={MyLink3} href="/xyz">
+            <MenuItem as={MyLink3} href="/links/xyz">
               <Text>xyz</Text>
             </MenuItem>
           </MenuList>
         )}
       </Menu>
       <Menu>
-        <MenuButton as={MyLink3} href="/hoge">
+        <MenuButton as={MyLink3} href="/links/hoge">
           hoge
         </MenuButton>
       </Menu>
       <Menu>
-        <MyLink3 as={MenuButton} href="/piyo" prefetch={!isPreview}>
+        <MyLink3 as={MenuButton} href="/links/piyo" prefetch={!isPreview}>
           piyo
         </MyLink3>
       </Menu>
