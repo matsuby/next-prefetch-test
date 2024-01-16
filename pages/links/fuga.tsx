@@ -5,7 +5,7 @@ export function getStaticProps() {
     props: {
       fuga: "fuga",
     },
-    // revalidate: 15,
+    revalidate: 5,
   };
 }
 
